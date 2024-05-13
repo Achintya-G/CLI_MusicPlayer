@@ -1,3 +1,10 @@
+import json
+
+def firstRun():
+    pass
+
+
+
 def echo(*x):
     """Echos anything passed to this function"""
     for i in x[0]:
