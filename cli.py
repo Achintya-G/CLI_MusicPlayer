@@ -9,7 +9,7 @@ def assigner(function):
 
 
 if __name__ == "__main__":
-    #checking
+    # Checking if program is being run for first time and running initialize function
     if not os.path.isfile(os.getcwd()+"\\settings.json"):
         username = input("\tEnter Your name : \n\t")
         settings = {"name": username}
