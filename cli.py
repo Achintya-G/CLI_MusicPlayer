@@ -1,4 +1,5 @@
 import os
+import json
 from cliFuncs import *
 
 
@@ -8,11 +9,16 @@ def assigner(function):
 
 
 if __name__ == "__main__":
-
-    print(os.getcwd())
-
-
-
+    #checking
+    if not os.path.isfile(os.getcwd()+"\\settings.json"):
+        username = input("\tEnter Your name : \n\t")
+        settings = {"name": username}
+        with open("settings.json", "w") as f:
+            json.dump(settings, f, indent=4)
+    else:
+        with open("settings.json","r") as f:
+            name = json.load(f)["name"]
+        print(f"\t Welcome back {name}")
 
     # running a loop to continuously take input
     while True:
